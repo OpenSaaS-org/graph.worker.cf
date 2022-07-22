@@ -1,0 +1,27 @@
+name: do-worker-template
+main_module: worker.js
+account_id: 
+workers_dev: true
+usage_model: unbound
+compatibility_date: 2021-11-12
+
+
+durable_objects:
+  bindings:
+    - name: Database
+      class_name: Database
+      
+migrations:
+  - tag: v1
+    new_classes:
+      - Database
+
+# r2_buckets:
+#   - binding: BUCKET
+#     bucket_name: ''
+#     preview_bucket_name: ''
+
+# kv_namespaces:
+#   - binding: TODO
+#     id: 06779da6940b431db6e566b4846d64db
+
